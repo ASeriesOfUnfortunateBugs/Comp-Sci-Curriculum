@@ -1,0 +1,16 @@
+body {
+  background-color: white; 
+  background-image: linear-gradient(100deg, white 20%, #9aa5b8 50%);
+}
+
+li {display:inline;
+text-align: center;
+padding: 138px;
+}
+
+
+a{font-family: verdana ;font-size:2em; text-decoration: none; border: 1px #585ca3; padding-left: 5px;
+	padding-right: 5px; padding-bottom: .5px; transition: color 0.5s, background-color 0.5s;}
+
+
+a:hover{ background-color: Black ; color: white;}

@@ -1,0 +1,106 @@
+html,body{
+	padding:0;
+	margin:0;
+}
+
+
+*{
+    box-sizing: border-box;
+    direction: ltr;
+	font-family:sans-serif;
+}
+
+.container{
+width:90%;
+margin:auto auto;
+min-height: 550px;
+}
+
+.siteheader{
+    padding: 10px;
+    background-color: #61697d;
+    display: flex;
+    justify-content: space-between;
+}
+
+.siteheader a {
+text-decoration: none;
+color: white;
+}
+
+.siteheader a:hover{
+	background-color: white ; color: #313030;  transition: color 0.5s, background-color 0.5s; padding-left: 5px;
+	padding-right: 5px; padding-bottom: .5px; border: 1px #585ca3;
+}
+
+.siteheader__section{
+    display: flex;
+    align-items: center;
+}
+
+.siteheader__item{
+    padding: 5px 15px;
+    font-size: 15px;
+}
+
+.siteheader__item +.siteheader__item{
+    margin-left: 5px;
+}
+
+.siteheader__btn{
+    cursor: pointer;
+    color: #dadfeb;
+}
+
+.siteheader__item.active{
+    color: #fff;
+    background-color: #404552;
+    border-radius: 4px;
+
+}
+
+.siteheaderlogo{
+    font-size: 20px;
+    line-height: 0;
+    color: #fff;
+}
+
+.book-container table td img{
+	width: 30%;
+    float: right;
+    margin-right: 25px;
+}
+
+.book-container table td input[type=number]{
+    max-width: 50px;
+	    margin-right: 10px;
+}
+
+.book-container table th{
+    float: right;
+    margin: 15px 0;
+}
+
+footer {
+    text-align: right;
+    padding: 3px;
+    background-color: #61697d;
+    color: white;
+    font-size: 12px;
+  }
+
+.admin {
+    float: left;
+}
+
+.submitBtn{
+	border:0;
+	border-radius:10px;
+	background-color:black;
+	color:white;
+	padding:5px 15px;
+}
+
+.right {
+    text-align: right;
+}

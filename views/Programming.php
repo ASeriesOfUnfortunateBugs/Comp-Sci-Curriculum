@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Comp Sci Curriculum | Programming</title>
+
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+	<link rel="stylesheet" href="./views/global.css">
+    <link rel="stylesheet" href="./views/programming.css">
+    <link rel="stylesheet" href="./views/menu.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+  
+
+</head>
+<body>
+<header>
+<section id="nav">
+    <div class="siteheader">
+        <div class="siteheader__section">
+            <div class="siteheader__item siteheaderlogo">
+                <img src="./imgs/logo.png" style="width:10%">
+            </div>
+            <div class="siteheader__item siteheader__btn">
+                        <a href="?action=menu"><?php echo 'Home'; ?></a>
+            </div>
+            <?php foreach ($subjects as $subject) : ?>
+                <div class="siteheader__item siteheader__btn">
+                    <a href="?action=<?php echo $subject['subject']; ?>"><?php echo $subject['subject']; ?></a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="siteheader__section">
+            <div class="siteheader__item siteheader__btn"><a href="?action=cart">Cart</a></div>
+            <?php if (!isset($_SESSION['validLogin'])) : ?>
+                <a class="siteheader__item siteheader__btn" href="?action=uLogin">Log In</a>
+            <?php elseif ($_SESSION['validLogin']) : ?>
+                <a class="siteheader__item siteheader__btn" href="?action=uLogout">Log Out</a>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
+</header>
+
+<div class="container">
+<div class= "book-container">
+<form action="." method="post">
+    <input type="hidden" name="action" value="add" />
+        <table>
+            <th>Programming Books</th>
+            <?php $c = 0; ?>
+            <?php foreach ($books as $book) : ?>
+                <tr>
+                    <td><input type="hidden" name="isbn<?php echo $c; ?>" value="<?php echo $book['isbn']; ?>" /></td>
+                    <td><img src="./imgs/<?php echo $book['isbn']; ?>.jpg" > </td>
+                    <td><p><?php echo $book['title']; ?></p>
+                        <p>By: <?php echo $book['author']; ?></p></td>
+                    <td>Qty: <input type="number" name="qty<?php echo $c; ?>" /></td>
+                </tr>
+                <?php $c += 1; ?>
+            <?php endforeach; ?>
+            <tr>
+                <td colspan="4" class="right"><input type="submit" class="submitBtn" value="Add to cart" /></td>
+            </tr>
+        </table>
+</form>
+</div>
+</div>
+<footer>
+    <p><a href="?action=admin" class="admin">Admin</a></p>
+    <p><a href="http://www.omfgdogs.com/#">Comp Sci Curriculum</a> &copy; 2021</p>
+</footer>
+</body>
+</html>
