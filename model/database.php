@@ -2,8 +2,8 @@
 
 // variables with database information
 $dsn = 'mysql:host=localhost;dbname=final';
-$username = 'staff';
-$password = 'password';
+$username = 'root';
+$password = '';
 
 // creating PDO object for connecting to database
 try {
