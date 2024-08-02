@@ -31,3 +31,5 @@ As Christian turned in the HTML and CSS he'd been working on, I added whatever P
 As everything began to come together, we both took part in bug testing. We'd had our share of bugs that we encountered during the development process and had managed to keep on top of them so this step was much easier than it could have been. We did have some last minute bugs with our cart system, but we were able to smooth everything out.
 
 Ultimately, this was one of my favorite academic projects. I felt like I learned a lot about collaborative efforts and communicating with others in a software development context. It was definitely a challenge, but I had a lot of fun working with Christian and look back on this experience with pride and fondness. (We got a 100, btw. 😉)
+
+If you would like to see a demostration video for this project, [I have one available here](https://youtu.be/YgA_-ED4-Qg).
